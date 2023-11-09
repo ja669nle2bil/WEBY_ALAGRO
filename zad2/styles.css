@@ -1,0 +1,84 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.form-row {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap:nowrap;
+    margin-bottom: 20px;
+}
+input,select,textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;;
+    color: #000;
+}
+.radio-options, .checkbox-options {
+    flex-direction: column;
+}
+.radio-options label, .checkbox-options label {
+    display: block;
+    margin-bottom: 10px;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: orangered; 
+}
+#question-lab {
+    color: orangered;
+}
+#question-lab input {
+    color: #000;
+}
+    /* buttonik */
+input[type="reset"], input[type="submit"] {
+    background-color: orange;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="reset"]:hover, input[type="submit"]:hover {
+    background-color: #ff7f00;
+}
+
+/* Adjusting the width and gap for buttons */
+input[type="reset"] {
+    flex-basis: 25%; 
+}
+
+input[type="submit"] {
+    flex-basis: 70%; 
+    margin-left: 5%; /* creating the small gap */
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+        /* ok */
+@media (min-width: 600px) {
+    input, select, textarea {
+        width: auto;
+    }
+    .form-row {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .radio-options, .checkbox-options {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .radio-options label, .checkbox-options label {
+        flex: 1;
+    }
+}
+

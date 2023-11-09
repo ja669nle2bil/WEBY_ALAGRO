@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="Style.css">
+    <title>das Formular</title>
+</head>    
+
+<body>
+    <main class="container">
+        <form action="" method="get" class="form">
+            <h2 class="title">Mitarbeiterformular</h2>
+            <section class="form-group name">
+                <div class="form-input">
+                    <label for="firstname">Vorname</label>
+                    <input class="input" type="text" name="firstname" id="firstname" required />
+                </div>
+                <div class="form-input">
+                    <label for="lastname">der Nachname</label>
+                    <input class="input" type="text" name="lastname" id="lastname" required />
+                </div>
+            </section>
+            <section class="form-group data">
+                <div class="form-input">
+                    <label for="email">Email</label>
+                    <input class="input" type="email" name="email" id="email" required />
+                </div>
+                <div class="form-input">
+                    <label for="phone">Phone</label>
+                    <input class="input" type="text" name="phone" id="phone" pattern="\d{3}[\s]\d{3}[\s]\{3}" required />
+                </div>
+                <div class="form-input">
+                    <label for="date">Date of birth</label>
+                    <input class="input clr-black" type="date" name="date" id="date" max="2023-10-26" required>
+                </div>
+            </section>
+
+            <section class="form-group fd-col">
+                <label for="gender-select">Geschlect</label>
+                <select class="input clr-black" name="gender" id="gender-select" required>
+                    <option disabled selected hidden value=""></option>
+                    <option value="male">männlich</option>
+                    <option value="female">weiblich</option>
+                    <option value="other">andere</option>
+                </select>
+            </section>
+
+            <section class="form-group fd-col">
+                <label>Wonach suchst du?</label>
+                <div class="checkbox-wrapper clr-black">
+                    <div class="checkbox">
+                        <input type="radio" id="analitycs" name="company" required>
+                        <label for="analitycs">Analytics-Spezialist</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="radio" id="project-manager" name="company" required>
+                        <label for="project-manager">Projektmanager</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="radio" id="software-engineer" name="company" required>
+                        <label for="software-engineer">Softwareentwickler</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="radio" id="ux" name="company" required>
+                        <label for="ux">UX-Designer</label>
+                    </div>
+                </div>
+            </section>
+            <section class="form-group fd-col">
+                <label>Welche Programmiersprache kennen Sie?</label>
+                <div class="checkbox-wrapper">
+                    <div class="checkbox">
+                        <input type="checkbox" id="java" name="java">
+                        <label for="java">Java</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" id="js" name="js">
+                        <label for="js">JavaScript</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" id="c#" name="c#">
+                        <label for="c#">C#</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" id="kotlin" name="kotlin">
+                        <label for="kotlin">Kotlin</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" id="python" name="python">
+                        <label for="python">Python</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" id="scala" name="scala">
+                        <label for="scala">Scala</label>
+                    </div>
+                </div>
+            </section>
+
+            <section class="form-group fd-col">
+                <label for="messages">Mitteilungen</label>
+                <textarea class="input" id="messages" name="messages" rows="8" placeholder="Geben Sie Ihre Nachricht ein. 'typ yr msg" required></textarea>
+            </section>
+            
+            <section class="form-group">
+                <input class="btn btn-reset" type="reset" value="Reset" />
+                <input class="btn btn-reset" type="submit" value="submit" />
+            </section>
+        </form>
+    </main>
+</body>
